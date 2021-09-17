@@ -1,29 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <Challengers playersList="challengers"/>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import Vue from 'vue'
+
+import Challengers from '@/components/molecules/Challengers.vue'
 
 export default Vue.extend({
   name: 'App',
   components: {
-    HelloWorld
+    Challengers
   }
 });
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass">
+*
+  box-sizing: border-box
+  padding: 0
+  margin: 0
+
+body
+  background-color: #252525
+  font-family: Arial, Helvetica, sans-serif
+
+#app
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 1rem
 </style>
